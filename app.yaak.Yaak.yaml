@@ -31,4 +31,6 @@ modules:
       - install -Dm644 usr/share/icons/hicolor/128x128/apps/yaak-app.png /app/share/icons/hicolor/128x128/apps/app.yaak.Yaak.png
       - install -Dm644 usr/share/icons/hicolor/32x32/apps/yaak-app.png /app/share/icons/hicolor/32x32/apps/app.yaak.Yaak.png
       - install -Dm644 usr/share/icons/hicolor/256x256@2/apps/yaak-app.png /app/share/icons/hicolor/256x256@2/apps/app.yaak.Yaak.png
+      - install -Dm644 usr/share/applications/yaak-app.desktop /app/share/applications/app.yaak.Yaak.desktop
+      - sed -i 's/Icon=yaak-app/Icon=app.yaak.Yaak/g' /app/share/applications/app.yaak.Yaak.desktop
       - install -Dm644 app.yaak.Yaak.metainfo.xml /app/share/metainfo/app.yaak.Yaak.metainfo.xml

@@ -28,6 +28,8 @@
       Yaak appears simple at first, but comes with everything you need
     </p>
   </description>
+
+  <icon type="local" width="128" height="128">/app/share/icons/hicolor/128x128/apps/app.yaak.Yaak.png</icon>
   
   <launchable type="desktop-id">app.yaak.Yaak.desktop</launchable>
   <screenshots>
