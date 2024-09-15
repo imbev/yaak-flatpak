@@ -1,0 +1,34 @@
+id: app.yaak.Yaak
+
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+
+command: yaak-app
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --share=ipc
+  - --share=network
+
+modules:
+  - name: binary
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://github.com/yaakapp/app/releases/download/v2024.8.2/yaak_2024.8.2_amd64.deb
+        sha256: d9e6b5be775255b406ba6d7d1a18b3ab177c334c0769226803be077195dbbfbd
+        only-arches: [x86_64]
+      - type: file
+        path: app.yaak.Yaak.metainfo.xml
+    build-commands:
+      - ar -x *.deb
+      - tar -xf data.tar.gz
+      - ls usr/share/icons/hicolor/32x32/apps
+      - 'install -Dm755 usr/bin/yaak-app /app/bin/yaak-app'
+      - install -Dm644 usr/share/applications/yaak-app.desktop /app/share/applications/app.yaak.Yaak.desktop
+      - install -Dm644 usr/share/icons/hicolor/128x128/apps/yaak-app.png /app/share/icons/hicolor/128x128/apps/app.yaak.Yaak.png
+      - install -Dm644 usr/share/icons/hicolor/32x32/apps/yaak-app.png /app/share/icons/hicolor/32x32/apps/app.yaak.Yaak.png
+      - install -Dm644 usr/share/icons/hicolor/256x256@2/apps/yaak-app.png /app/share/icons/hicolor/256x256@2/apps/app.yaak.Yaak.png
+      - install -Dm644 app.yaak.Yaak.metainfo.xml /app/share/metainfo/app.yaak.Yaak.metainfo.xml

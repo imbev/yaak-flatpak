@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>app.yaak.Yaak</id>
+  
+  <name>Yaak</name>
+  <summary>A desktop API client for organizing and executing REST, GraphQL, and gRPC requests.</summary>
+  <url type="homepage">https://yaak.app/</url>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <categories>
+    <category>Development</category>
+    <category>Network</category>
+  </categories>
+  
+  <description>
+    <p>
+      ## The API client for modern developers Call REST, GraphQL, and gRPC APIs from a simple and intuitive app
+    </p>
+    <p>
+      ## The Postman alternative you&apos;ll love Offline, modern, open source, and extendable. Get started instantly by importing your data from Postman, Insomnia, or OpenAPI.
+    </p>
+    <p>
+      ## Make APIs a joy to use Yaak appears simple at first, but comes with everything you need
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">app.yaak.Yaak.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/user-attachments/assets/f18e963f-0b68-4ecb-b8b8-cb71aa9aec02</image>
+    </screenshot>
+  </screenshots>
+</component>
